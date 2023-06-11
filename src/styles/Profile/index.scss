@@ -1,0 +1,455 @@
+@import '../styleVariables';
+
+.profile_loading_super{
+    margin: auto;
+    margin-top: 20px;
+    width: 1100px;
+    height: 600px;
+    border: 1px solid rgba(128, 128, 128, 0.501);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $width-medium){
+        width: 90vw;
+    
+    
+    }
+    .loader {
+        margin: auto;
+        border: 5px solid #EAF0F6;
+        border-radius: 50%;
+        border-top: 5px solid #5191ff;
+        width: 40px;
+        height: 40px;
+        animation: spinner 1s linear infinite;
+      }
+}
+
+.profile_header{
+    margin: auto;
+    margin-top: 20px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(84, 84, 84);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.501);
+    @media (max-width: $width-medium){
+        width: 90vw;
+        padding: 10px 10px;
+        border-radius: 10px;
+    
+    }
+ 
+    .profile_header_left{
+        display: flex;
+   
+    }
+    .profile_header_rigth{
+        .profile_header_ladder_rank{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+            font-size: .9rem;
+            margin-right: 10px;
+            font-style: italic;
+        }
+      
+    }
+}
+.profile_header_pfp_container{
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 25%;
+
+    background-color: rgba(0, 0, 0, 0.442);
+    @media (max-width: $width-small){
+        width: 90px;
+        height: 90px;
+
+    }
+    img{
+        width: 100%;
+        border-radius: 25%;
+    }
+}
+.profile_header_general_info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .profile_header_sumoner_name{
+        font-size: 1.5rem;
+        font-weight: 500;
+        @media (max-width: $width-small){
+            font-size: 1.2rem;
+        }
+    }
+    .profile_header_sumoner_level{
+        font-style: italic;
+        font-size: .9rem;
+        @media (max-width: $width-small){
+            font-size: .8rem;
+        }
+    }
+}
+//=============================================================================================
+//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=
+//========================           BODY             =========================================
+//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=
+//=============================================================================================
+
+.type_victory{
+    color: rgba(5, 91, 196, 0.8);
+}
+.type_defeat{
+    color: rgba(167, 3, 3, 0.6);
+}
+.type_remake{
+    color: rgba(30, 30, 30, 0.39)
+}
+
+.profile_body{
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-evenly;
+    @media (max-width: $width-medium){
+        flex-direction: column;
+        width: 100vw;
+        padding: 0px;
+        margin: auto;
+    }
+
+
+}
+
+
+
+.profile_body_rigth{
+    @media (max-width: $width-medium){
+        margin-top: 10px;
+        width: 100vw;
+    }
+    
+    .victory_match{
+        background-color: rgba(4, 95, 206, 0.336);
+        border-left: 8px solid rgba(5, 91, 196, 0.579);
+    }
+    .defeat_match{
+        background-color: rgba(206, 4, 4, 0.336);
+        border-left: 8px solid rgba(196, 5, 5, 0.579);
+    }
+    .remake_match{
+        background-color: rgba(33, 33, 33, 0.185);
+        border-left: 8px solid rgba(46, 46, 46, 0.227);
+    }
+
+    .profile_body_match{
+        height: 115px;
+        display: flex;
+        width: 620px;
+        border-radius: 5px;
+        justify-content: space-between;
+        padding: 0px 10px;
+        margin-bottom: 10px;
+        @media (max-width: $width-medium){
+            width: 93vw;
+            padding: 0 5px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        .profile_body_match_specs{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }   
+        .queue{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80px;
+            padding-left: 5px;
+            @media (max-width: $width-medium){
+                padding: 0;
+                display: none;
+            }
+            .queue_result{
+                font-weight: 500;
+                font-size: .8rem;
+                color: rgba(38, 38, 38, 0.695);
+           
+            }
+            .queue_type{
+                font-size: 1rem;
+                width: 90px;
+                font-weight: 900;
+             
+            }
+           
+            .queue_match_duration{
+                font-size: .6rem;
+                font-weight: 300;
+                font-style: italic;
+              
+            }
+
+        }
+        .champion{
+
+            .queue_type_mini{
+                text-align: left;
+                width: 100%;
+                font-size: .8rem;
+                position: absolute;
+                top: 1%;
+                font-weight: 900;
+                display: none;
+                @media (max-width: $width-medium){
+                    display: flex;
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            position: relative;
+         
+            .champion_champion{
+                display: flex;
+                height: 80px;
+                width: 100%;
+           
+            }
+            .champion-spells{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .champion_icon{
+                    width: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        height: 110%;
+                        width: 100%;
+                    }
+                    @media (max-width: $width-medium){
+                       width: 50px;
+                    }
+                }
+                .champion_summoner-spell, .champion_summoner-rune{
+                    width: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-content: center;
+                    margin-left: 5px;
+                    @media (max-width: $width-medium){
+                        width: 25px;
+                        img{
+                            border-radius: 5px;
+                            margin-bottom: 2px;
+                        }
+                    }
+                    .rune1{
+                        width: 100%;
+                        @media (max-width: $width-medium){
+                            width: 25px;
+                        }
+                    }
+                    .rune2{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        @media (max-width: $width-medium){
+                            width: 25px;
+                        }
+                        img{
+                            width: 60%;
+
+                        }
+                    }
+
+                }
+            }
+            .scores{
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 90px;
+                @media (max-width: $width-medium){
+                    margin-left: 3px;
+                    width: 75px;
+                }
+                .scores_kda{
+                    font-weight: 500;
+                    font-size: .9rem;
+                    color: rgba(39, 39, 39, 0.832);
+                    @media (max-width: $width-medium){
+                        font-size: .8rem;
+                    }
+                }
+                .scores_kda-points{
+                    color: rgba(72, 72, 72, 0.832);
+                    font-weight: 300;
+                    font-size: .7rem;
+                    @media (max-width: $width-medium){
+                        font-size: .6rem;
+                    }
+                }
+                .scores_killing-spree{
+                    font-weight: 300;
+                    font-size: .8rem;
+                    color: white;
+                    background-color: rgba(34, 184, 84, 0.604);
+                    padding: 2px 6px;
+                    border-radius: 25px;
+                    @media (max-width: $width-medium){
+                        font-size: .7rem;
+                    }
+                }
+            }
+            .build{
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                .build_item{
+                    border-radius: 5px;
+                    height: 25px;
+                    width: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(104, 104, 104, 0.286);
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                    @media (max-width: $width-medium){
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+            }
+        }
+       .profile_body_match_lobby{
+        position: relative;
+        .queue_match_timeago{
+            position: absolute;
+            top: 10%;
+            font-size: .7rem;
+            font-weight: 500;
+            font-style: italic;
+            @media (max-width: $width-medium){
+                font-size: .6rem;
+            }
+        }
+       }
+       .general_stats{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: $width-medium){
+        }
+        .score_visionScore{
+            @media (max-width: $width-medium){            
+               display: none;
+
+            }
+        }
+        .scores_cs,  .score_visionScore{
+            color: rgba(72, 72, 72, 0.832);
+            font-weight: 300;
+            font-size: .7rem;
+            @media (max-width: $width-medium){            
+                align-items: center;
+                font-size: .6rem;
+
+            }
+        }
+        .score_killP{
+            color: rgba(55, 55, 55, 0.896);
+            font-weight: 500;
+            font-size: .8rem;
+            @media (max-width: $width-medium){
+                font-size: .6rem;
+            }
+        }
+    }
+        .team{
+            display: grid;
+            grid-template-columns: repeat(5, 20px);
+            grid-template-rows: repeat(2, 20px);
+            grid-column-gap: 6px;
+            grid-row-gap: 4px;
+            place-content: center;
+            @media (max-width: $width-medium){
+                grid-template-columns: repeat(5, 20px);
+                grid-template-rows: repeat(2, 20px);
+                grid-column-gap: 5px;
+                grid-row-gap: 10px;
+            }
+            .team_member{
+                cursor: pointer;
+                display: flex;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    .lobby_summoner_name{
+                        display: block;
+                    }
+                }
+                .team_icon_member{
+                    height: 20px;
+                    width: 20px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 101%;
+                    }
+                }
+                .selected_summoner{
+                    border-radius: 5px;
+
+                    border: 2px solid rgb(240, 205, 27);
+                }
+                .lobby_summoner_name{
+                    font-weight: 500;
+                    background-color: rgb(54, 54, 54);
+                    color: white;
+                    padding: 7px 14px;
+                    border-radius: 5px;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    top:-110%;
+                    max-width: auto;
+                    min-width: 70px;
+                    text-align: center;
+                    font-size: .7rem;
+                    white-space: nowrap;
+                    display: none;
+
+                  
+                }
+            }
+        }
+
+    }
+
+}

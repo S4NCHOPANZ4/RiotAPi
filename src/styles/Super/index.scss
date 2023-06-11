@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+$secondaryColor: #61026d;
+
+
+
+.super{
+    font-family: 'roboto', system-ui, -apple-system;
+    height: 100vh;
+}
+
+
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #262626; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+.error_super{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    .error_content{
+      width: 80%;
+      border-radius: 10px;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      .error_sidecont{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80px;
+      }
+
+      p{
+        color: #ffffff;
+        font-weight: 100;
+      }
+      .err_title{
+        font-size: 2.2rem;
+
+      }
+      .errtype{
+        font-size: 1.1rem;
+        font-style: italic;
+      }
+
+      .button_container{
+        position: absolute;
+        bottom: 10%;
+        .error_button{
+          color: white;
+          background-color: #5191ff;
+          border: none;
+          border-radius: 100%;
+          padding: 10px;
+          margin-top: 10px;
+          width: auto;
+          height: auto;
+          font-weight: 200;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon{
+            height: 35px;
+            width: 35px;
+          }
+          &:hover{
+            background-color: #5191ff93;
+          }
+        }
+      }
+    }
+    
+}
+
+.super_footer{
+  background-color: #1c335c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: 60px;
+  .footer_img_container{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .footer_left_cont{
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .footer_dev{
+      cursor: pointer;
+      font-size: .8rem;
+
+    }
+    .footer_me{
+      font-size: .8rem;
+    }
+    .icon{
+      cursor: pointer;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+  }
+}

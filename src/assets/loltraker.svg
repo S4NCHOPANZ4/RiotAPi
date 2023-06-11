@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="90.601952mm"
+   height="18.583748mm"
+   viewBox="0 0 90.601952 18.583748"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <rect
+       x="232.61855"
+       y="331.34616"
+       width="458.47491"
+       height="362.45215"
+       id="rect236" />
+    <rect
+       x="232.61855"
+       y="331.34616"
+       width="458.47491"
+       height="362.45215"
+       id="rect236-8" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-5.7070934,-5.8333566)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.4183468,0,0,0.36263356,-92.127956,-113.6879)"
+       id="text234-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Flavor_sans;-inkscape-font-specification:Flavor_sans;white-space:pre;shape-inside:url(#rect236-8);fill:#666666;fill-opacity:0.15896"><tspan
+         x="232.61914"
+         y="380.67901"
+         id="tspan7367">LoLTracker</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.4183468,0,0,0.36263355,-92.300046,-115.54216)"
+       id="text234"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Flavor_sans;-inkscape-font-specification:Flavor_sans;white-space:pre;shape-inside:url(#rect236);fill:#1a1a1a"><tspan
+         x="232.61914"
+         y="380.67901"
+         id="tspan7371"><tspan
+   style="fill:#4c71b3;fill-opacity:0.985549"
+   id="tspan7369">LoL</tspan>Tracker</tspan></text>
+  </g>
+</svg>
