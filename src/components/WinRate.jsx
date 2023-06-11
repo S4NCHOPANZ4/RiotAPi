@@ -72,7 +72,7 @@ const WinRate = ({ data, puuid}) => {
         setLanes(Object.values(helper_lanes));
         console.log(lanes);
 
-    },[])
+    },[data])
     const getGraphicWinrate = (wins, games) =>{
         return Math.floor((((wins * 100)/games)*220)/100)
     }

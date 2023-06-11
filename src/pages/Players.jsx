@@ -77,7 +77,6 @@ const Players = () => {
   }
   const gotoProfile = (summonerName, server, continent) =>{
     navigate('/summoner/'+continent+'/'+server+'/'+summonerName)
-    window.location.reload()
   } 
   const fixMax = () =>{
     if (maxRank >= 200){

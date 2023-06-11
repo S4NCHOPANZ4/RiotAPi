@@ -48,7 +48,7 @@ const TopData = ({data, puuid}) => {
           setStats(Object.values(helper));
           
 
-    },[])
+    },[data])
 
   return (
     <div className='general-champ-stats_super'>

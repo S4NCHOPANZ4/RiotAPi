@@ -37,14 +37,12 @@ const Navbar = () => {
   })
   const [summonerName, setsummonerName] = useState({})
   
-  let match = useMatch("/leaderboards/:cont/:region/:name");
 
   useEffect(()=>{
     const path = window.location.pathname;
     const segments = path.split('/');
     const value = segments[1];
     setPagValue(value)
-    console.log(value);
   },[location])
 
   useEffect(() => {
@@ -93,10 +91,7 @@ const Navbar = () => {
     },[100])
   };
 
-  const navigateProfile = () =>{
-    navigate('/summoner/'+statePlatform.value+'/'+statePlatform.server+'/'+summonerName);
-    window.location.reload();
-  }
+
 
   const changeServer = (url, name, value) =>{
       setServer({

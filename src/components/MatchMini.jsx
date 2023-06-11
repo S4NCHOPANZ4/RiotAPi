@@ -63,7 +63,7 @@ const MatchMini = ({gameMode, gameDuration,
         setMatchSpecs(playerInfo)
         setLobby(lobby)
 
-    },[])
+    },[participants])
 
     const navigateProfile = (puuid) =>{
         navigate('/summoner?puuidL='+puuid);
@@ -318,7 +318,6 @@ const MatchMini = ({gameMode, gameDuration,
                 
                 onClick={()=>{
                         navigate('/summoner/'+cont+'/'+region+'/'+user.summonerName);
-                        window.location.reload();
                 }}
                 className={(user.summonerName == matchSpecs.summonerName)? 'team_icon_member selected_summoner': 'team_icon_member'}>
 

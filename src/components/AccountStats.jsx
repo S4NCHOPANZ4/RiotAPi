@@ -20,7 +20,7 @@ const AccountStats = ({stats}) => {
     })
     console.log(stats);
 
-  },[])
+  },[stats])
 
   const toLoweCaseF = (txt) =>{
     if(txt){

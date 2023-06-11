@@ -2,11 +2,14 @@ import React from 'react'
 import { useNavigate  } from 'react-router-dom';
 
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import heimer from '../assets/heimerdinger_error.webp'
 
 const ErrorPage = ({err, bg, errtype, sub}) => {
 
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/')
+  }
 
   return (
     <div className='error_super' style={{backgroundImage: `linear-gradient(218deg, rgba(0,0,0,0.16) 0%, rgba(70,138,255,0.5) 94%), url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${bg}.jpg')`}}>
@@ -18,7 +21,7 @@ const ErrorPage = ({err, bg, errtype, sub}) => {
               <p className='errtype'>err type: {errtype} <br/>{err}<br/> {sub} </p>
               }
               <div className='button_container'>
-                <button className='error_button' onClick={()=>navigate('/')}> <KeyboardBackspaceIcon className='icon'/>  </button>
+                <button className='error_button' onClick={handleClick}> <KeyboardBackspaceIcon className='icon'/>  </button>
               </div>
               
             </div>

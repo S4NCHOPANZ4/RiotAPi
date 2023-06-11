@@ -14,6 +14,7 @@ import Footer from '../components/Footer';
 
 const Profile = () => {
     const navigate = useNavigate();
+    const location = useLocation();
 
 
     const { state, dispatch } = useContext(AppContext);
@@ -21,7 +22,7 @@ const Profile = () => {
     const [matches, setMatches] = useState([]);
     const [stats, setStats]  = useState();
     const [loaded, setLoaded] = useState(false)
-
+    const [params, setParams] = useState()
 
     let match = useMatch("/summoner/:cont/:region/:username");
     let cont = match.params.cont;
@@ -29,30 +30,33 @@ const Profile = () => {
     let username = match.params.username;
 
 
-
 async function data_fetch(){
-
     try{
      
-        getPLayerByName(username, region).then(res =>{
+        getPLayerByName(params.username, params.region).then(res =>{
             if(res === 'err'){
                 navigate('/staySafe/summonerErr')
+                console.log('name');
                 return
             }
 
             dispatch({ type: 'NEW_PROFILE', payload: res })
    
-            getMatchIdsByPuuid(res.puuid, cont).then(res =>{
+            getMatchIdsByPuuid(res.puuid, params.cont).then(res =>{
                 if(res === 'err'){
                     navigate('/staySafe/overflow')
                 }
+                console.log('matches');
+
                 setMatches(res)
                 setLoaded(true)
             })
-            getAccountSpecs(res.id, region).then(res =>{
+            getAccountSpecs(res.id, params.region).then(res =>{
                 if(res === 'err'){
                     navigate('/staySafe/summonerErr')
                 }
+                console.log('stats',res);
+
                 setStats(res)
             })
         })
@@ -64,9 +68,21 @@ async function data_fetch(){
 }
 
 
+    
 useEffect(() => {
+    console.log(cont, region, username);
+    setParams({
+        cont: cont,
+        region: region,
+        username: username
+    })
+
+}, [location]);
+
+useEffect(()=>{
+    setLoaded(false)
     data_fetch()
-}, []);
+},[params])
 
 
 
