@@ -1,5 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/(.*)", "destination": "https://lol-tracker-v1.vercel.app/$1" }
-    ]
-  }
