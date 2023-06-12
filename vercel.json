@@ -1,10 +1,5 @@
 {
     "rewrites": [
-      { "source": "^/$", "destination": "/index.html" },
-      { "source": "^/summoner/([^/]+)/([^/]+)/([^/]+)$", "destination": "/index.html" },
-      { "source": "^/leaderboards/([^/]+)/([^/]+)/([^/]+)$", "destination": "/index.html" },
-      { "source": "^/staySafe/overflow$", "destination": "/index.html" },
-      { "source": "^/staySafe/summonerErr$", "destination": "/index.html" },
-      { "source": ".*", "destination": "/index.html" }
+      { "source": "/(.*)", "destination": "https://lol-tracker-v1.vercel.app/$1" }
     ]
   }
