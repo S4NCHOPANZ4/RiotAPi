@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Home from './pages/Home';
-const apit = import.meta.env.VITE_API_KEY
 //CSS
 import './styles/Super/index.css';
 import Profile from './pages/Profile';
@@ -15,7 +14,6 @@ import Footer from './components/Footer';
 const ReactRouter = () => {
     
     useEffect(() => {
-        console.log(apit);
         const handlePopstate = () => {
         window.location.reload();
     };
