@@ -1,5 +1,6 @@
-const api_key = import.meta.env.VITE_API_KEY
+const api_key =  import.meta.env.VITE_API_KEY
 import axios from 'axios'
+
 
 
 export function getPLayerByName (name, url)  {
