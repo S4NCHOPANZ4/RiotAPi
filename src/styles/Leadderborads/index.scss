@@ -17,6 +17,24 @@
       background-position: 800px 0
     }
   }
+
+ .leadderboards_nosummoners{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    height: 700px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.501);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    h1{
+        font-size: 1rem;
+        font-weight: 300;
+        color: #5191ff;
+    }
+ } 
 .leaderboard_loading{
     width: 900px;
     margin: auto;
