@@ -22,7 +22,7 @@ const TopData = ({data, puuid}) => {
               helper[championName].deaths += objeto.deaths;
               helper[championName].assists += objeto.assists;
               helper[championName].kills += objeto.kills;
-              helper[championName].kda += objeto.challenges.kda;
+              helper[championName].kda += objeto.challenges?.kda;
               helper[championName].cs += (objeto.neutralMinionsKilled + objeto.totalMinionsKilled);
               if(objeto.win){
                 helper[championName].wins++;
@@ -36,7 +36,7 @@ const TopData = ({data, puuid}) => {
                 deaths: objeto.deaths,
                 assists: objeto.assists,
                 kills: objeto.kills,
-                kda: objeto.challenges.kda,
+                kda: objeto.challenges?.kda,
                 wins: 0,
                 cs: objeto.neutralMinionsKilled + objeto.totalMinionsKilled
               };

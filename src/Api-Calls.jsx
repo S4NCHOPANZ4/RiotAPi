@@ -31,7 +31,6 @@ export const getAccountSpecs = async (id, url) =>{
   const API_URL = 'https://'+url+'.api.riotgames.com/lol/league/v4/entries/by-summoner/'+id+'?api_key='+ api_key;
   try {
     const response = await axios.get(API_URL);
-    // console.log(response.data)
     return response.data
 
   } catch (err) {
@@ -68,7 +67,6 @@ export const getMatchIdsByPuuid = async (puuid, server) => {
 
     const matchResponses = await Promise.all(matchPromises);
     const matchesg = matchResponses.map(matchResponse => matchResponse.data);
-
     return matchesg;
   } catch (err) {
 

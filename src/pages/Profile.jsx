@@ -46,8 +46,6 @@ async function data_fetch(){
                 if(res === 'err'){
                     navigate('/staySafe/overflow')
                 }
-                console.log('matches');
-
                 setMatches(res)
                 setLoaded(true)
             })
@@ -55,7 +53,6 @@ async function data_fetch(){
                 if(res === 'err'){
                     navigate('/staySafe/summonerErr')
                 }
-                console.log('stats',res);
 
                 setStats(res)
             })
@@ -70,7 +67,6 @@ async function data_fetch(){
 
     
 useEffect(() => {
-    console.log(cont, region, username);
     setParams({
         cont: cont,
         region: region,
@@ -117,7 +113,10 @@ useEffect(()=>{
                     <div className='loading_accStats'>
                     </div>
                     }
-                    {matches.length>0? <TopData data={matches} puuid={state.puuid}/>:
+                    {
+                    matches.length>0? 
+                    <TopData data={matches} puuid={state.puuid}/>
+                    :
                     <div className='loading_matches'>
                     </div>
                     }       
@@ -125,7 +124,9 @@ useEffect(()=>{
                    
                 </div>
                 <div className='profile_body_rigth'>
-                    {matches.length>0? <WinRate data={matches} puuid={state.puuid}/>:
+                    {matches.length>0? 
+                    <WinRate data={matches} puuid={state.puuid}/>
+                    :
                     <div className='loading_winrate'>
                     </div>
                     }

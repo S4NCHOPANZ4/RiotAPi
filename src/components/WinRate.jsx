@@ -59,12 +59,12 @@ const WinRate = ({ data, puuid}) => {
           games.map((game)=>{
             helper_winratio.wins += game.win
             helper_winratio.games ++
-            helper_winratio.kda += game.challenges.kda
+            helper_winratio.kda += game.challenges?.kda
             helper_winratio.kills += game.kills
             helper_winratio.deaths += game.deaths
             helper_winratio.assists += game.assists
-            if(game.challenges.killParticipation){
-                helper_winratio.killP +=  game.challenges.killParticipation
+            if(game.challenges?.killParticipation){
+                helper_winratio.killP +=  game.challenges?.killParticipation
 
             }
           })
